@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import './header.css'
+import { Search } from './Search'
 
 export const TheLibrary = () => {
     const [books, setBooks] = useState([]);
@@ -18,18 +19,19 @@ export const TheLibrary = () => {
     return (
         <>
         <div className="header">
-        <HeaderText>The Library <span role="img" aria-label="books icon">📚</span></HeaderText>
+        <HeaderText>THE LIBRARY</HeaderText>
         </div>
+        <Search />
             <AllBooksContainer> 
                 {books.map((book) => 
                     <EachBook>
                         <Link to={`/books/${book.bookID}`}>
-                        <IconContainer>
-                            <span role="img" aria-label="book icon">📖 </span>
+                            <IconContainer>
+                                <span role="img" aria-label="book icon">📖</span>
                             </IconContainer>
-                            <BookTitles>{book.title}</BookTitles>
-                                <Authors>{book.authors}</Authors>
-                                </Link>
+                                <BookTitles>{book.title}</BookTitles>
+                                    <Authors>{book.authors}</Authors>
+                        </Link>
                     </EachBook>
                 )}
             </AllBooksContainer>
@@ -38,30 +40,33 @@ export const TheLibrary = () => {
 }
 
 const HeaderText = styled.h1`
-color: white;
-text-align: center;
-padding-top: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 378px;
+padding-top: 4px;
+width: 100%;
+height: 40px;
+background-color: rgba(255, 255, 255, 0.685);
 `
 
 const AllBooksContainer = styled.div`
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
-background-color: lightseagreen;
 width: auto;
 height: auto;
 text-align: center;
-margin: 30px;
 padding: 20px;
 `
 
 const EachBook = styled.div`
-background: white;
-margin: 10px;
+background-color: white;
+margin: 20px;
 padding: 3px;
 width: 280px;
 height: auto;
-border: solid 12px teal;
+border: solid 5px rgb(230, 216, 216);
 `
 
 const BookTitles = styled.p`

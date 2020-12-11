@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+
 .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Goudy Bookletter 1911', serif;
     background-image: url(./books.jpg);
     background-size: cover;
     height: 400px;
     width: auto;
-    margin: 30px;
+
 }
