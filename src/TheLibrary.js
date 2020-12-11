@@ -18,13 +18,15 @@ export const TheLibrary = () => {
     return (
         <>
         <div className="header">
-        <HeaderText>The Library 📚</HeaderText>
+        <HeaderText>The Library <span role="img" aria-label="books icon">📚</span></HeaderText>
         </div>
             <AllBooksContainer> 
                 {books.map((book) => 
                     <EachBook>
                         <Link to={`/books/${book.bookID}`}>
-                        <Icon>📖 </Icon>
+                        <IconContainer>
+                            <span role="img" aria-label="book icon">📖 </span>
+                            </IconContainer>
                             <BookTitles>{book.title}</BookTitles>
                                 <Authors>{book.authors}</Authors>
                                 </Link>
@@ -70,6 +72,6 @@ const Authors = styled.p`
 font-style: italic;
 `
 
-const Icon = styled.div`
+const IconContainer = styled.div`
 padding: 5px 0 5px 0;
 `
