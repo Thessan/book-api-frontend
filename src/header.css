@@ -1,0 +1,7 @@
+.header {
+    background-image: url(./books.jpg);
+    background-size: cover;
+    height: 400px;
+    width: auto;
+    margin: 30px;
+}

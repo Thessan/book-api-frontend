@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+
+import './header.css'
 
 export const TheLibrary = () => {
     const [books, setBooks] = useState([]);
@@ -14,13 +17,17 @@ export const TheLibrary = () => {
 
     return (
         <>
-        <Header>The Library 📚</Header>
+        <div className="header">
+        <HeaderText>The Library 📚</HeaderText>
+        </div>
             <AllBooksContainer> 
                 {books.map((book) => 
                     <EachBook>
+                        <Link to={`/books/${book.bookID}`}>
                         <Icon>📖 </Icon>
-                            <BookTitle>{book.title}</BookTitle>
-                                <Author>{book.authors}</Author>
+                            <BookTitles>{book.title}</BookTitles>
+                                <Authors>{book.authors}</Authors>
+                                </Link>
                     </EachBook>
                 )}
             </AllBooksContainer>
@@ -28,9 +35,10 @@ export const TheLibrary = () => {
 )
 }
 
-const Header = styled.h1`
+const HeaderText = styled.h1`
 color: white;
 text-align: center;
+padding-top: 20px;
 `
 
 const AllBooksContainer = styled.div`
@@ -51,14 +59,14 @@ margin: 10px;
 padding: 3px;
 width: 280px;
 height: auto;
-border: solid 5px teal;
+border: solid 12px teal;
 `
 
-const BookTitle = styled.p`
+const BookTitles = styled.p`
 font-weight: bold;
 `
 
-const Author = styled.p`
+const Authors = styled.p`
 font-style: italic;
 `
 
