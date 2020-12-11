@@ -18,13 +18,13 @@ export const TheLibrary = () => {
     return (
         <>
         <div className="header">
-        <HeaderText>The Library</HeaderText>
+        <HeaderText>The Library 📚</HeaderText>
         </div>
             <AllBooksContainer> 
                 {books.map((book) => 
                     <EachBook>
                         <Link to={`/books/${book.bookID}`}>
-                        {/* <Icon>📖 </Icon> */}
+                        <Icon>📖 </Icon>
                             <BookTitles>{book.title}</BookTitles>
                                 <Authors>{book.authors}</Authors>
                                 </Link>
@@ -70,6 +70,6 @@ const Authors = styled.p`
 font-style: italic;
 `
 
-/* const Icon = styled.div`
+const Icon = styled.div`
 padding: 5px 0 5px 0;
-` */
+`
