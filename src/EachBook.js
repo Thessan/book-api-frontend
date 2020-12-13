@@ -30,7 +30,7 @@ export const EachBook = () => {
                         <Text>Written by:</Text> <Details>{eachBook.authors}</Details>
                             <Text>Average rating:</Text> <Details>{eachBook.average_rating}</Details>
                                 <Text>ISBN:</Text> <Details>{eachBook.isbn}</Details>
-                                    <Link to="/">
+                                    <Link to="/books">
                                         <span className="icon" role="img" aria-label="icon">⬅️ </span>
                                     </Link> 
             </EachBookContainer>
