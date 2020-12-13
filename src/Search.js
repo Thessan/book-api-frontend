@@ -3,12 +3,15 @@ import styled from 'styled-components'
 
 import { SearchResults } from './SearchResults'
 
+
 export const Search = () => {
     const [author, setAuthor] = useState(''); // single object (author)
     const [books, setBooks] = useState([]); // array of objects (books)
+    const [searchResultsShowing, setSearchResultsShowing] = useState(false)
 
     const handleSubmit = (event) => {
-        event.preventDefault();
+        setSearchResultsShowing(true)
+        
 
     fetch(`https://thessans-book-api.herokuapp.com/books/search?author=${author}`)
         .then((response) => response.json())
@@ -18,10 +21,18 @@ export const Search = () => {
         })
     };
 
+    if (searchResultsShowing === true) {
+        return <>
+        <Search />
+        <SearchResults books={books}/> {/* want the search results to open and be displayed on a new page */}
+        </>
+    }
+
+
     return (
         <>
         <TextContainer>
-            <p>Search books by author</p>
+            <Text>Search books by author</Text>
                 </TextContainer>
                     <SearchContainer>
                         <form>
@@ -32,19 +43,25 @@ export const Search = () => {
                             value={author}
                             onChange={(event) => setAuthor(event.target.value)} />
                         </label>
-                            <SearchButton type="submit" onClick={handleSubmit}>SEARCH</SearchButton>
+                            <SearchButton type="submit" 
+                            onClick={(event) => handleSubmit()}>
+                                SEARCH</SearchButton>
                         </form>
                     </SearchContainer>
-
-                    <SearchResults books={books}/>
         </>
     )
+
 }
 
 const TextContainer = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
+`
+
+const Text = styled.p`
+font-size: 20px;
+color: white;
 `
 
 const SearchContainer = styled.div`

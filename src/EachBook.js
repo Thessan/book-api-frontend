@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import './header.css'
+import { NavigationBar } from './NavigationBar'
 
 export const EachBook = () => {
     const { bookID } = useParams()
@@ -19,6 +20,7 @@ export const EachBook = () => {
 
     return (
         <>
+        <NavigationBar />
         <div className="header">
             <HeaderText>BOOK DETAILS</HeaderText>
         </div>

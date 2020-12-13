@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import './header.css'
+import { NavigationBar } from './NavigationBar'
 import { Search } from './Search'
 
 export const TheLibrary = () => {
@@ -18,6 +19,7 @@ export const TheLibrary = () => {
 
     return (
         <>
+        <NavigationBar />
         <div className="header">
         <HeaderText>THE LIBRARY</HeaderText>
         </div>
@@ -66,7 +68,7 @@ margin: 20px;
 padding: 3px;
 width: 280px;
 height: auto;
-border: solid 5px rgb(230, 216, 216);
+border: solid 8px rgb(230, 216, 216);
 `
 
 const BookTitles = styled.p`
