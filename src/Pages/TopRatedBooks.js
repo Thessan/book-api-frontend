@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
-import { NavigationBar } from './NavigationBar'
+import { NavigationBar } from '../Components/NavigationBar'
 
 export const TopRatedBooks = () => {
-    const [topTen, setTopTen] = useState([])
+    const [topTen, setTopTen] = useState([]) // square brackets since it's an array we're getting from the fetch
 
     fetch(`https://thessans-book-api.herokuapp.com/books/top-ten`)
         .then((response) => response.json())
@@ -25,7 +25,7 @@ export const TopRatedBooks = () => {
                     {topTen.map((book) => (
                         <div>
                         <EachBook>
-                            <Link to={`/books/${book.bookID}`}>
+                            <Link to={`/books/top-ten/${book.bookID}`}>
                                 <IconContainer>
                                     <span role="img" aria-label="book icon">📖</span>
                                 </IconContainer>

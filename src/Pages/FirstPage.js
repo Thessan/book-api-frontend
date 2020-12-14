@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 
-import { NavigationBar } from './NavigationBar'
+import { NavigationBar } from '../Components/NavigationBar'
 
 export const FirstPage = () => {
     return (
@@ -22,7 +22,6 @@ const QuoteContainer = styled.div`
 text-align: center;
 margin: auto;
 padding-top: 250px;
-margin-bottom: 0;
 `
 
 const Quote = styled.h1`

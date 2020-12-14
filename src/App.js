@@ -1,10 +1,11 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import { FirstPage } from './FirstPage'
-import { TheLibrary } from './TheLibrary'
-import { EachBook } from './EachBook'
-import { TopRatedBooks } from './TopRatedBooks'
+import { FirstPage } from './Pages/FirstPage'
+import { TheLibrary } from './Pages/TheLibrary'
+import { EachBookLibrary } from './Pages/EachBookLibrary'
+import { EachBookTopRated } from './Pages/EachBookTopRated'
+import { TopRatedBooks } from './Pages/TopRatedBooks'
 
 export const App = () => {
   return (
@@ -19,11 +20,15 @@ export const App = () => {
         </Route>
 
         <Route path="/books/:bookID">
-          <EachBook />
+          <EachBookLibrary />
         </Route>
 
         <Route path="/top-ten" exact>
           <TopRatedBooks />
+        </Route>
+
+        <Route path="/books/top-ten/:bookID">
+          <EachBookTopRated />
         </Route>
 
       </Switch>

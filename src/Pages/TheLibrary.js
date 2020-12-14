@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import './header.css'
-import { NavigationBar } from './NavigationBar'
+import '../header.css'
+import { NavigationBar } from '../Components/NavigationBar'
 import { Search } from './Search'
 
 export const TheLibrary = () => {
-    const [books, setBooks] = useState([]);
+    const [books, setBooks] = useState([]); // square brackets since it's an array we're getting from the fetch
 
     useEffect(() => {
         fetch('https://thessans-book-api.herokuapp.com/books')

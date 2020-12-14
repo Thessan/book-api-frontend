@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import { SearchResults } from './SearchResults'
 
-
 export const Search = () => {
     const [author, setAuthor] = useState(''); // single object (author)
     const [books, setBooks] = useState([]); // array of objects (books)

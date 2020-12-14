@@ -3,15 +3,15 @@ import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import './header.css'
-import { NavigationBar } from './NavigationBar'
+import '../header.css'
+import { NavigationBar } from '../Components/NavigationBar'
 
-export const EachBook = () => {
+export const EachBookLibrary = () => {
     const { bookID } = useParams()
     const [eachBook, setEachBook] = useState({}) // curly brackets since we're getting an object from the fetch
 
     useEffect(() => {
-        fetch(`https://thessans-book-api.herokuapp.com/books/book/${bookID}`)
+        fetch(`https://thessans-book-api.herokuapp.com/books/${bookID}`)
         .then((response) => response.json())
         .then((json) => {
             setEachBook(json);
@@ -31,7 +31,7 @@ export const EachBook = () => {
                             <Text>Average rating:</Text> <Details>{eachBook.average_rating}</Details>
                                 <Text>ISBN:</Text> <Details>{eachBook.isbn}</Details>
                                     <Link to="/books">
-                                        <span className="icon" role="img" aria-label="icon">⬅️ </span>
+                                        <span className="icon" role="img" aria-label="button back to The Library">⬅️ </span>
                                     </Link> 
             </EachBookContainer>
         </>
