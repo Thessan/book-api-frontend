@@ -4,8 +4,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { FirstPage } from './Pages/FirstPage'
 import { TheLibrary } from './Pages/TheLibrary'
 import { EachBookLibrary } from './Pages/EachBookLibrary'
-import { EachBookTopRated } from './Pages/EachBookTopRated'
 import { TopRatedBooks } from './Pages/TopRatedBooks'
+import { EachBookTopRated } from './Pages/EachBookTopRated'
 
 export const App = () => {
   return (
@@ -19,11 +19,11 @@ export const App = () => {
           <TheLibrary />
         </Route>
 
-        <Route path="/books/:bookID">
+        <Route path="/books/book/:bookID">
           <EachBookLibrary />
         </Route>
 
-        <Route path="/top-ten" exact>
+        <Route path="/books/top-ten" exact>
           <TopRatedBooks />
         </Route>
 

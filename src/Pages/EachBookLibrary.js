@@ -11,7 +11,7 @@ export const EachBookLibrary = () => {
     const [eachBook, setEachBook] = useState({}) // curly brackets since we're getting an object from the fetch
 
     useEffect(() => {
-        fetch(`https://thessans-book-api.herokuapp.com/books/${bookID}`)
+        fetch(`https://thessans-book-api.herokuapp.com/books/book/${bookID}`)
         .then((response) => response.json())
         .then((json) => {
             setEachBook(json);
