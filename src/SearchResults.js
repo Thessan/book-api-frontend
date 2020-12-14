@@ -31,12 +31,12 @@ padding: 20px;
 `
 
 const EachResult = styled.div`
-background-color: white;
+background-color: rgb(230, 216, 216);
 margin: 20px;
 padding: 3px;
 width: 280px;
 height: auto;
-border: solid 8px rgb(230, 216, 216);
+border: solid 8px white;
 `
 
 const BookTitles = styled.p`

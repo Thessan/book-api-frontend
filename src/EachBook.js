@@ -57,7 +57,7 @@ width: auto;
 height: auto;
 margin: 30px;
 padding: 30px;
-border: solid 5px rgb(230, 216, 216);
+border: solid 8px rgb(230, 216, 216);
 `
 
 const Title = styled.p`
