@@ -19,7 +19,7 @@ export const App = () => {
           <TheLibrary />
         </Route>
 
-        <Route path="/books/book/:bookID">
+        <Route path="/books/book/:bookID" >
           <EachBookLibrary />
         </Route>
 
@@ -27,7 +27,7 @@ export const App = () => {
           <TopRatedBooks />
         </Route>
 
-        <Route path="/books/top-ten/:bookID">
+        <Route path="/books/top-ten/:bookID" >
           <EachBookTopRated />
         </Route>
 

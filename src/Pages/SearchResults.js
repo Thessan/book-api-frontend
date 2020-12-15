@@ -6,7 +6,7 @@ export const SearchResults = ({ books }) => {
     return (
         <ResultsContainer>
             {books.map((book) => (
-                <EachResult>
+                <EachResult key={book.bookID}>
                     <Link to={`/books/book/${book.bookID}`}>
                         <IconContainer>
                                 <span role="img" aria-label="book icon">📖</span>

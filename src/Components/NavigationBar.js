@@ -14,7 +14,7 @@ export const NavigationBar = () => {
             THE LIBRARY
         </NavLink>
 
-        <NavLink to="/top-ten" className="top-rated">
+        <NavLink to="/books/top-ten" className="top-rated">
             TOP RATED BOOKS
         </NavLink>
         </nav>

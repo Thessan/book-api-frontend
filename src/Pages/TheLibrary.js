@@ -26,8 +26,8 @@ export const TheLibrary = () => {
         <Search />
             <AllBooksContainer> 
                 {books.map((book) => 
-                    <EachBook>
-                        <Link to={`/books/${book.bookID}`}>
+                    <EachBook key={book.bookID}>
+                        <Link to={`/books/book/${book.bookID}`}>
                             <IconContainer>
                                 <span role="img" aria-label="book icon">📖</span>
                             </IconContainer>
