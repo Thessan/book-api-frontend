@@ -23,28 +23,27 @@ export const Search = () => {
     if (searchResultsShowing === true) {
         return <>
         <Search />
-        <SearchResults books={books}/> {/* want the search results to open and be displayed on a new page */}
+        <SearchResults books={books}/> {/* TO ADD: want the search results to open and be displayed on a new page */}
         </>
     }
 
 
     return (
         <>
-        <TextContainer>
-            <Text>Search books by author</Text>
-                </TextContainer>
                     <SearchContainer>
                         <form>
                         <label htmlFor="searchByAuthor">
-                            <input
+                            <Input
                             id="searchByAuthor"
                             type="text"
+                            placeholder="Find book by author"
                             value={author}
                             onChange={(event) => setAuthor(event.target.value)} />
                         </label>
                             <SearchButton type="submit" 
                             onClick={(event) => handleSubmit()}>
-                                SEARCH</SearchButton>
+                                SEARCH
+                                </SearchButton>
                         </form>
                     </SearchContainer>
         </>
@@ -52,23 +51,35 @@ export const Search = () => {
 
 }
 
-const TextContainer = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-`
-
-const Text = styled.p`
-font-size: 20px;
-color: white;
-`
-
 const SearchContainer = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
+margin-top: 20px;
+background-color: white;
+width: 250px;
+margin: auto;
+margin-top: 30px;
+`
+
+const Input = styled.input`
+background-color: white;
+font-family: 'Josefin Sans', sans-serif;
+font-size: 12px;
+font-style: italic;
+width: 160px;
+height: 15px;
+margin-right: 5px;
+padding: 3px 0 0 2px;
+border: none;
 `
 
 const SearchButton = styled.button`
+background-color: white;
+font-family: 'Goudy Bookletter 1911', serif;
+color: teal;
+font-weight: bold;
+border: none;
+cursor: pointer;
 `
 

@@ -20,10 +20,10 @@ export const TopRatedBooks = () => {
             <div className="header">
                 <HeaderText>TOP RATED BOOKS</HeaderText>
             </div>
-            <TopRatedText>Theses are the 10 top rated books right now with a rating over 4.</TopRatedText>
+            <TopRatedText>These are the current 10 top rated books that has recieved a rating over 4.</TopRatedText>
                 <TopTenContainer>    
                     {topTen.map((book) => (
-                        <div>
+                        <div key={book.bookID}>
                         <EachBook>
                             <Link to={`/books/top-ten/${book.bookID}`}>
                                 <IconContainer>
@@ -45,16 +45,19 @@ const HeaderText = styled.h1`
 display: flex;
 align-items: center;
 justify-content: center;
+font-size: 25px;
 margin-top: 378px;
-padding-top: 4px;
+padding: 3px 0 3px 0;
 width: 100%;
-height: 40px;
+height: 33px;
 background-color: rgba(255, 255, 255, 0.685);
 `
 
 const TopRatedText = styled.p`
-font-size: 20px;
+font-family: 'Goudy Bookletter 1911', serif;
+font-size: 18px;
 color: white;
+font-style: italic;
 text-align: center;
 margin-bottom: 0;
 padding-top: 8px;

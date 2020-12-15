@@ -45,10 +45,11 @@ const HeaderText = styled.h1`
 display: flex;
 align-items: center;
 justify-content: center;
+font-size: 25px;
 margin-top: 378px;
-padding-top: 4px;
+padding: 3px 0 3px 0;
 width: 100%;
-height: 40px;
+height: 33px;
 background-color: rgba(255, 255, 255, 0.685);
 `
 

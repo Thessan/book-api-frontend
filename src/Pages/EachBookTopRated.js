@@ -26,13 +26,14 @@ export const EachBookTopRated = () => {
         </div>
             <EachBookContainer>
                 <Title>{eachBook.title}</Title>
-                    <Text>Number of pages:</Text> <Details>{eachBook.num_pages}</Details>
-                        <Text>Written by:</Text> <Details>{eachBook.authors}</Details>
-                            <Text>Average rating:</Text> <Details>{eachBook.average_rating}</Details>
-                                <Text>ISBN:</Text> <Details>{eachBook.isbn}</Details>
-                                    <Link to="/books/top-ten">
-                                        <span className="icon" role="img" aria-label="button back to Top Rated books">⬅️ </span>
-                                    </Link> 
+                    <hr></hr>
+                        <Text>Number of pages:</Text> <Details>{eachBook.num_pages}</Details>
+                            <Text>Written by:</Text> <Details>{eachBook.authors}</Details>
+                                <Text>Average rating:</Text> <Details>{eachBook.average_rating}</Details>
+                                    <Text>ISBN:</Text> <Details>{eachBook.isbn}</Details>
+                                        <Link to="/books/top-ten">
+                                            <span className="icon" role="img" aria-label="button back to Top Rated books">⬅️ </span>
+                                        </Link> 
             </EachBookContainer>
         </>
     )
@@ -43,10 +44,11 @@ const HeaderText = styled.h1`
 display: flex;
 align-items: center;
 justify-content: center;
+font-size: 25px;
 margin-top: 378px;
-padding-top: 4px;
+padding: 3px 0 3px 0;
 width: 100%;
-height: 40px;
+height: 33px;
 background-color: rgba(255, 255, 255, 0.685);
 `
 
@@ -62,9 +64,8 @@ border: solid 8px rgb(230, 216, 216);
 
 const Title = styled.p`
 color: teal;
-font-size: 22px;
+font-size: 20px;
 font-weight: bold;
-text-decoration: underline;
 `
 
 const Text = styled.p`

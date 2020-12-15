@@ -21,12 +21,12 @@ export const FirstPage = () => {
 const QuoteContainer = styled.div`
 text-align: center;
 margin: auto;
-padding-top: 250px;
+padding-top: 140px;
 `
 
 const Quote = styled.h1`
 font-family: 'Goudy Bookletter 1911', serif;
-font-size: 35px;
+font-size: 25px;
 color: white;
 margin: auto;
 padding: 8px;
@@ -34,7 +34,6 @@ padding: 8px;
 
 const QuoteAuthorContainer = styled.div`
 font-family: 'Goudy Bookletter 1911', serif;
-font-size: 20px;
 color: white;
 text-align: center;
 font-style: italic;
@@ -42,5 +41,5 @@ margin: auto;
 `
 
 const QuoteAuthor = styled.p`
-font-size: 21px;
+font-size: 18px;
 `
