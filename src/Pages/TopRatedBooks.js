@@ -78,7 +78,7 @@ background-color: white;
 margin: 20px;
 padding: 3px;
 width: 300px;
-height: 180px;
+min-height: 150px;
 border: solid 8px rgb(230, 216, 216);
 `
 

@@ -30,25 +30,24 @@ export const Search = () => {
 
     return (
         <>
-                    <SearchContainer>
-                        <form>
-                        <label htmlFor="searchByAuthor">
-                            <Input
-                            id="searchByAuthor"
-                            type="text"
-                            placeholder="Find book by author"
-                            value={author}
-                            onChange={(event) => setAuthor(event.target.value)} />
-                        </label>
-                            <SearchButton type="submit" 
-                            onClick={(event) => handleSubmit()}>
-                                SEARCH
-                                </SearchButton>
-                        </form>
-                    </SearchContainer>
+            <SearchContainer>
+                <form>
+                    <label htmlFor="searchByAuthor">
+                        <Input
+                        id="searchByAuthor"
+                        type="text"
+                        placeholder="Find book by author"
+                        value={author}
+                        onChange={(event) => setAuthor(event.target.value)} />
+                    </label>
+                        <SearchButton type="submit" 
+                        onClick={(event) => handleSubmit()}>
+                        SEARCH
+                        </SearchButton>
+                </form>
+            </SearchContainer>
         </>
     )
-
 }
 
 const SearchContainer = styled.div`
@@ -72,6 +71,10 @@ height: 15px;
 margin-right: 5px;
 padding: 3px 0 0 2px;
 border: none;
+
+@media (min-width: 1024px) {
+    font-size: 14px;
+}
 `
 
 const SearchButton = styled.button`

@@ -21,7 +21,7 @@ export const FirstPage = () => {
 const QuoteContainer = styled.div`
 text-align: center;
 margin: auto;
-padding-top: 140px;
+padding-top: 180px;
 `
 
 const Quote = styled.h1`
@@ -30,6 +30,10 @@ font-size: 25px;
 color: white;
 margin: auto;
 padding: 8px;
+
+@media (min-width: 768px) {
+    font-size: 30px;
+}
 `
 
 const QuoteAuthorContainer = styled.div`
@@ -42,4 +46,8 @@ margin: auto;
 
 const QuoteAuthor = styled.p`
 font-size: 18px;
+
+@media (min-width: 768px) {
+    font-size: 20px;
+}
 `
