@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import '../header.css'
+import './each-book.css'
 import { NavigationBar } from '../Components/NavigationBar'
 import { Search } from './Search'
 
@@ -27,7 +28,8 @@ export const TheLibrary = () => {
             <AllBooksContainer> 
                 {books.map((book) => 
                     <EachBook key={book.bookID}>
-                        <Link to={`/books/book/${book.bookID}`}>
+                        <Link className="each-book"
+                        to={`/books/book/${book.bookID}`}>
                             <IconContainer>
                                 <span role="img" aria-label="book icon">📖</span>
                             </IconContainer>

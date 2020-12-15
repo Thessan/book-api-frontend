@@ -2,12 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
+import './each-book.css'
+
 export const SearchResults = ({ books }) => {
     return (
         <ResultsContainer>
             {books.map((book) => (
                 <EachResult key={book.bookID}>
-                    <Link to={`/books/book/${book.bookID}`}>
+                    <Link className="each-book"
+                    to={`/books/book/${book.bookID}`}>
                         <IconContainer>
                                 <span role="img" aria-label="book icon">📖</span>
                             </IconContainer>

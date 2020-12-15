@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 import { NavigationBar } from '../Components/NavigationBar'
+import './each-book.css'
 
 export const TopRatedBooks = () => {
     const [topTen, setTopTen] = useState([]) // square brackets since it's an array we're getting from the fetch
@@ -25,7 +26,8 @@ export const TopRatedBooks = () => {
                     {topTen.map((book) => (
                         <div key={book.bookID}>
                         <EachBook>
-                            <Link to={`/books/top-ten/${book.bookID}`}>
+                            <Link className="each-book"
+                            to={`/books/top-ten/${book.bookID}`}>
                                 <IconContainer>
                                     <span role="img" aria-label="book icon">📖</span>
                                 </IconContainer>
