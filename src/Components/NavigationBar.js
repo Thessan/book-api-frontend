@@ -6,17 +6,17 @@ import '../navbar.css'
 export const NavigationBar = () => {
     return(
         <nav>
-        <NavLink to="/" className="first-page">
-            FIRST PAGE
-        </NavLink>
+            <NavLink to="/" className="first-page">
+                FIRST PAGE
+            </NavLink>
 
-        <NavLink to="/books" className="library">
-            THE LIBRARY
-        </NavLink>
+            <NavLink to="/books" className="library">
+                THE LIBRARY
+            </NavLink>
 
-        <NavLink to="/books/top-ten" className="top-rated">
-            TOP RATED BOOKS
-        </NavLink>
+            <NavLink to="/books/top-ten" className="top-rated">
+                TOP RATED BOOKS
+            </NavLink>
         </nav>
     )
 }

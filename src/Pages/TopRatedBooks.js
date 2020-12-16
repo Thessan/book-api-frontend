@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 import { NavigationBar } from '../Components/NavigationBar'
-import './each-book.css'
+import '../each-book.css'
 
 export const TopRatedBooks = () => {
     const [topTen, setTopTen] = useState([]) // square brackets since it's an array we're getting from the fetch
@@ -44,54 +44,54 @@ export const TopRatedBooks = () => {
 };
 
 const HeaderText = styled.h1`
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 25px;
-margin-top: 378px;
-padding: 3px 0 3px 0;
-width: 100%;
-height: 33px;
-background-color: rgba(255, 255, 255, 0.685);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.685);
+    font-size: 25px;
+    width: 100%;
+    height: 33px;
+    margin-top: 378px;
+    padding: 3px 0 3px 0;
 `
 
 const TopRatedText = styled.p`
-font-family: 'Goudy Bookletter 1911', serif;
-font-size: 18px;
-color: white;
-font-style: italic;
-text-align: center;
-margin-bottom: 0;
-padding-top: 8px;
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-size: 18px;
+    color: white;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 0;
+    padding-top: 8px;
 `
 
 const TopTenContainer = styled.div`
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-width: auto;
-height: auto;
-text-align: center;
-padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 20px;
 `
 
 const EachBook = styled.div`
-background-color: white;
-margin: 20px;
-padding: 3px;
-width: 300px;
-min-height: 150px;
-border: solid 8px rgb(230, 216, 216);
+    background-color: white;
+    width: 300px;
+    min-height: 150px;
+    margin: 20px;
+    padding: 3px;
+    border: solid 8px rgb(230, 216, 216);
 `
 
 const BookTitles = styled.p`
-font-weight: bold;
+    font-weight: bold;
 `
 
 const Authors = styled.p`
-font-style: italic;
+    font-style: italic;
 `
 
 const IconContainer = styled.div`
-padding: 5px 0 5px 0;
+    padding: 5px 0 5px 0;
 `

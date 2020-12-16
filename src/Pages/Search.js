@@ -22,8 +22,8 @@ export const Search = () => {
 
     if (searchResultsShowing === true) {
         return <>
-        <Search />
-        <SearchResults books={books}/> {/* TO ADD: want the search results to open and be displayed on a new page */}
+            <Search />
+                <SearchResults books={books}/> {/* TO ADD: want the search results to open and be displayed on a new page */}
         </>
     }
 
@@ -51,38 +51,37 @@ export const Search = () => {
 }
 
 const SearchContainer = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-margin-top: 20px;
-background-color: white;
-width: 250px;
-margin: auto;
-margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 250px;
+    margin-top: 30px;
+    margin: auto;
 `
 
 const Input = styled.input`
-background-color: white;
-font-family: 'Josefin Sans', sans-serif;
-font-size: 12px;
-font-style: italic;
-width: 160px;
-height: 15px;
-margin-right: 5px;
-padding: 3px 0 0 2px;
-border: none;
+    background-color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    width: 160px;
+    height: 15px;
+    margin-right: 5px;
+    padding: 3px 0 0 2px;
+    border: none;
 
-@media (min-width: 1024px) {
+    @media (min-width: 1024px) {
     font-size: 14px;
-}
+    }
 `
 
 const SearchButton = styled.button`
-background-color: white;
-font-family: 'Goudy Bookletter 1911', serif;
-color: teal;
-font-weight: bold;
-border: none;
-cursor: pointer;
+    background-color: white;
+    font-family: 'Goudy Bookletter 1911', serif;
+    color: teal;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
 `
 
