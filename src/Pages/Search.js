@@ -56,8 +56,7 @@ const SearchContainer = styled.div`
     justify-content: center;
     background-color: white;
     width: 250px;
-    margin-top: 30px;
-    margin: auto;
+    margin: 30px auto;
 `
 
 const Input = styled.input`
